@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SpaceThon — Reciclagem de resíduos espaciais. Coletamos, reciclamos e revendemos materiais orbitais para a indústria espacial.">
+  <title>SpaceThon | Reciclagem Espacial</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVEGAÇÃO ========== -->
+  <header class="header">
+    <div class="container header-content">
+
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="Logo SpaceThon" class="logo-img">
+        Space<span>Thon</span>
+      </a>
+
+      <!-- Menu Hambúrguer (mobile) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navegação -->
+      <nav class="nav" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link ativo">Home</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+          <li><a href="integrantes.html" class="nav-link">Integrantes</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+          <li class="nav-separator"></li>
+          <li><a href="solucao.html" class="nav-link">Tecnologia</a></li>
+          <li><a href="mercado.html" class="nav-link">Mercado B2B</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <div class="container hero-content">
+        <img src="assets/logo.png" alt="Logo SpaceThon" class="hero-logo">
+        <h1 class="hero-titulo">Limpando a órbita. <span>Reciclando o futuro.</span></h1>
+        <p class="hero-texto">
+          Coletamos resíduos espaciais com drones robóticos, reciclamos materiais valiosos e
+          os devolvemos à indústria — fechando o ciclo da economia espacial.
+        </p>
+        <a href="solucao.html" class="btn-primario">Conheça a Solução</a>
+      </div>
+    </section>
+
+    <!-- ========== COMO FUNCIONA ========== -->
+    <section class="destaques">
+      <div class="container">
+        <h2 class="secao-titulo">Como funciona?</h2>
+        <p class="secao-subtitulo">Do espaço ao reuso — um ciclo completo em três etapas.</p>
+
+        <div class="cards-grid">
+
+          <article class="card">
+            <span class="card-icone">🛸</span>
+            <h3>Coleta Orbital</h3>
+            <p>Nosso drone robótico é lançado à órbita terrestre para identificar e coletar resíduos espaciais de alto valor.</p>
+          </article>
+
+          <article class="card">
+            <span class="card-icone">♻️</span>
+            <h3>Reciclagem</h3>
+            <p>Os materiais coletados retornam à Terra e passam por um processo de reciclagem industrial avançado.</p>
+          </article>
+
+          <article class="card">
+            <span class="card-icone">🚀</span>
+            <h3>Revenda</h3>
+            <p>Materiais reciclados são vendidos para fabricantes de foguetes, satélites e componentes espaciais.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta">
+      <div class="container cta-content">
+        <h2>Pronto para conhecer o futuro da reciclagem?</h2>
+        <p>Descubra como a SpaceThon transforma lixo espacial em recurso para novas missões.</p>
+        <a href="sobre.html" class="btn-primario">Saiba Mais</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-logo">
+        <img src="assets/logo.png" alt="Logo SpaceThon" class="footer-logo-img">
+        Space<span>Thon</span>
+      </p>
+      <p>&copy; 2026 Global Solution — FIAP. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="btnTopo" class="btn-topo" aria-label="Voltar ao topo">↑</button>
+
+  <!-- JS -->
+  <script src="js/menu.js"></script>
+</body>
+</html>

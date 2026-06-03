@@ -1,0 +1,387 @@
+/* ============================================================
+   HOME.CSS — Estilos da página inicial
+   ============================================================ */
+
+/* --- Reset básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-corpo);
+  background-color: var(--cor-bg);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Container --- */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+
+/* ============================================================
+   HEADER / NAVEGAÇÃO
+   ============================================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(6, 6, 15, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--cor-borda);
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* Logo */
+.logo {
+  font-family: var(--font-titulo);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.logo span,
+.footer-logo span {
+  color: var(--cor-primaria);
+}
+
+/* Imagens da logo */
+.logo-img {
+  height: 36px;
+  width: auto;
+}
+
+.hero-logo {
+  width: 140px;
+  margin: 0 auto var(--space-xl);
+  filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.3));
+}
+
+.footer-logo-img {
+  height: 28px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: var(--space-sm);
+}
+
+/* Nav Links */
+.nav-list {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cor-texto-secundario);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.ativo {
+  color: var(--cor-primaria);
+}
+
+/* Linha animada abaixo do link ativo */
+.nav-link.ativo::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--cor-primaria);
+  border-radius: var(--radius-full);
+}
+
+/* Menu Hambúrguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--cor-texto);
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+
+/* Animação: hambúrguer → X */
+.menu-toggle.ativo span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.ativo span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.ativo span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--gradiente-hero);
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.hero-titulo {
+  font-family: var(--font-titulo);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-lg);
+}
+
+.hero-titulo span {
+  background: var(--gradiente-primario);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-texto {
+  font-size: 1.1rem;
+  color: var(--cor-texto-secundario);
+  max-width: 600px;
+  margin: 0 auto var(--space-xl);
+}
+
+
+/* ============================================================
+   BOTÃO PRIMÁRIO
+   ============================================================ */
+.btn-primario {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-xl);
+  background: var(--gradiente-primario);
+  color: var(--cor-bg);
+  font-family: var(--font-corpo);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-full);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-primario:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-primaria);
+}
+
+
+/* ============================================================
+   SEÇÃO DESTAQUES
+   ============================================================ */
+.destaques {
+  padding: var(--space-3xl) 0;
+}
+
+.secao-titulo {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+.secao-subtitulo {
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--space-2xl);
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid de cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.card {
+  background: var(--cor-bg-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  text-align: center;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cor-primaria);
+}
+
+.card-icone {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.card h3 {
+  font-family: var(--font-titulo);
+  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+  color: var(--cor-primaria);
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   CTA
+   ============================================================ */
+.cta {
+  padding: var(--space-3xl) 0;
+  text-align: center;
+  background: var(--cor-bg-card);
+  border-top: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.cta h2 {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  margin-bottom: var(--space-sm);
+}
+
+.cta p {
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--space-xl);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  padding: var(--space-xl) 0;
+  text-align: center;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.footer-logo {
+  font-family: var(--font-titulo);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.footer p {
+  font-size: 0.8rem;
+  color: var(--cor-texto-secundario);
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+/* --- Tablet / Janela pequena (768px) --- */
+@media (max-width: 768px) {
+
+  /* Mostra o hambúrguer */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Menu mobile */
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(6, 6, 15, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--cor-borda);
+    padding: var(--space-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition), opacity var(--transition);
+  }
+
+  .nav.aberto {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  /* Cards em 2 colunas */
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Mobile (480px) --- */
+@media (max-width: 480px) {
+
+  /* Cards em coluna única */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-titulo {
+    font-size: 1.8rem;
+  }
+}
+
