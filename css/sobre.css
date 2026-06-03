@@ -1,0 +1,421 @@
+/* ============================================================
+   SOBRE.CSS — Estilos da página Sobre
+   ============================================================ */
+
+/* --- Reset básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-corpo);
+  background-color: var(--cor-bg);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Container --- */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+
+/* ============================================================
+   HEADER / NAVEGAÇÃO (mesmo padrão da Home)
+   ============================================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(6, 6, 15, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--cor-borda);
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  font-family: var(--font-titulo);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.logo span,
+.footer-logo span {
+  color: var(--cor-primaria);
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cor-texto-secundario);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.ativo {
+  color: var(--cor-primaria);
+}
+
+.nav-link.ativo::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--cor-primaria);
+  border-radius: var(--radius-full);
+}
+
+/* Menu Hambúrguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--cor-texto);
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+
+.menu-toggle.ativo span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.ativo span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.ativo span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* ============================================================
+   BANNER DA PÁGINA
+   ============================================================ */
+.page-banner {
+  padding-top: 140px;
+  padding-bottom: var(--space-3xl);
+  text-align: center;
+  background: var(--gradiente-hero);
+}
+
+.page-titulo {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.page-titulo span {
+  color: var(--cor-primaria);
+}
+
+.page-subtitulo {
+  color: var(--cor-texto-secundario);
+  font-size: 1.05rem;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+
+/* ============================================================
+   SEÇÕES DE CONTEÚDO
+   ============================================================ */
+.secao {
+  padding: var(--space-3xl) 0;
+}
+
+.secao-escura {
+  background: var(--cor-bg-card);
+  border-top: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.secao-titulo {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+.secao-subtitulo {
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--space-2xl);
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bloco de texto */
+.texto-bloco {
+  max-width: 750px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.texto-bloco p {
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+.texto-bloco strong {
+  color: var(--cor-primaria);
+}
+
+
+/* ============================================================
+   ETAPAS (1, 2, 3, 4)
+   ============================================================ */
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.etapa {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition);
+}
+
+.etapa:hover {
+  border-color: var(--cor-primaria);
+}
+
+.etapa-numero {
+  font-family: var(--font-titulo);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.etapa h3 {
+  font-family: var(--font-titulo);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-sm);
+}
+
+.etapa p {
+  font-size: 0.85rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   ODS DA ONU
+   ============================================================ */
+.ods-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.ods-card {
+  background: var(--cor-bg-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  transition: border-color var(--transition);
+}
+
+.ods-card:hover {
+  border-color: var(--cor-secundaria);
+}
+
+.ods-numero {
+  font-family: var(--font-titulo);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--cor-secundaria);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.ods-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.ods-card p {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   TECNOLOGIAS
+   ============================================================ */
+.tech-lista {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  text-align: center;
+}
+
+.tech-icone {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-sm);
+}
+
+.tech-item p {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  padding: var(--space-xl) 0;
+  text-align: center;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.footer-logo {
+  font-family: var(--font-titulo);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.footer-logo-img {
+  height: 28px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: var(--space-sm);
+}
+
+.footer p {
+  font-size: 0.8rem;
+  color: var(--cor-texto-secundario);
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+/* --- Tablet / Janela pequena (768px) --- */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(6, 6, 15, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--cor-borda);
+    padding: var(--space-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition), opacity var(--transition);
+  }
+
+  .nav.aberto {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  /* Etapas em 2 colunas */
+  .etapas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Mobile (480px) --- */
+@media (max-width: 480px) {
+
+  /* Etapas em 1 coluna */
+  .etapas {
+    grid-template-columns: 1fr;
+  }
+
+  /* ODS em 1 coluna */
+  .ods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-titulo {
+    font-size: 1.6rem;
+  }
+}
