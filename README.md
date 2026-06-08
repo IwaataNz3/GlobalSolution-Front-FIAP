@@ -52,7 +52,6 @@ Este projeto foi desenvolvido **100% nativamente**, sem uso de bibliotecas de te
  ┣ 📜 solucao.html        # Tecnologia / Simulador da Missão
  ┣ 📜 mercado.html        # Dashboard Interativo B2B
  ┗ 📜 README.md           # Guia Técnico do Projeto
-```
 
 ---
 
@@ -68,12 +67,31 @@ Equipe formada por alunos da **Turma 1º TDSR - FIAP**:
 
 ---
 
+## 📷 Imagens do projeto
+
+**Sistema de compra e venda dos nossos produtos**
+![SistemaB2B](assets/print1.png)
+
+**Sistema de simulação de recoleta de lixos na órbita**
+![SistemasSimulação](assets/print2.png)
+
+**ODS atendidas pelo projeto**
+![ODSAtendidas](assets/print3.png)
+
+---
+
 ## 🔗 Repositório no GitHub
 
-
 > **Acesso ao repositório:** https://github.com/IwaataNz3/GlobalSolution-Front-FIAP
+
 ---
 
 ## 📞 Contato
 
-Para dúvidas sobre o projeto técnico ou oportunidades comerciais, sinta-se à vontade para entrar em contato com qualquer um dos desenvolvedores via LinkedIn ou preenchendo o formulário de contato diretamente na plataforma da SpaceThon (`contato.html`).
+Para dúvidas sobre o projeto técnico ou oportunidades comerciais, sinta-se à vontade para entrar em contato com qualquer um dos desenvolvedores via LinkedIn
+
+- **Ana Paula Cunha Brum** - https://www.linkedin.com/in/ana-paula-brum/
+- **Gabriella Serni Ponzetta** - https://www.linkedin.com/in/gabriellaserni/
+- **Julio Cesar Iwata de Oliveira Barros** - https://www.linkedin.com/in/julioiwata/
+- **Rafael Santos Dias** - https://www.linkedin.com/in/rafaelsd/
+- **Victor Felipe Silva Alencar** — https://www.linkedin.com/in/victor-alencar-58623a3ba/
